@@ -25,12 +25,13 @@ public class Login extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        btnLogin = new javax.swing.JButton();
+        btnRegist = new javax.swing.JButton();
         lblUsn = new javax.swing.JLabel();
         txtUsn = new javax.swing.JTextField();
         txtpass = new javax.swing.JPasswordField();
         lblHeader = new javax.swing.JLabel();
         lblPass = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -46,22 +47,22 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(50, 50, 50));
         jPanel1.setLayout(null);
 
-        btnLogin.setBackground(new java.awt.Color(153, 153, 153));
-        btnLogin.setFont(new java.awt.Font("Vela Sans SemBd", 0, 10)); // NOI18N
-        btnLogin.setForeground(new java.awt.Color(51, 51, 51));
-        btnLogin.setText("Login");
-        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnRegist.setBackground(new java.awt.Color(153, 153, 153));
+        btnRegist.setFont(new java.awt.Font("Vela Sans SemBd", 0, 10)); // NOI18N
+        btnRegist.setForeground(new java.awt.Color(51, 51, 51));
+        btnRegist.setText("Regist");
+        btnRegist.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnLoginMouseClicked(evt);
+                btnRegistMouseClicked(evt);
             }
         });
-        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+        btnRegist.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLoginActionPerformed(evt);
+                btnRegistActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLogin);
-        btnLogin.setBounds(160, 220, 72, 21);
+        jPanel1.add(btnRegist);
+        btnRegist.setBounds(160, 240, 72, 21);
 
         lblUsn.setFont(new java.awt.Font("Vela Sans SemBd", 0, 12)); // NOI18N
         lblUsn.setForeground(new java.awt.Color(204, 204, 204));
@@ -84,6 +85,23 @@ public class Login extends javax.swing.JFrame {
         lblPass.setText("Password");
         jPanel1.add(lblPass);
         lblPass.setBounds(60, 157, 57, 17);
+
+        btnLogin.setBackground(new java.awt.Color(153, 153, 153));
+        btnLogin.setFont(new java.awt.Font("Vela Sans SemBd", 0, 10)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(51, 51, 51));
+        btnLogin.setText("Login");
+        btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnLoginMouseClicked(evt);
+            }
+        });
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLogin);
+        btnLogin.setBounds(160, 210, 72, 21);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -108,11 +126,11 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    private void btnRegistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnLoginActionPerformed
+    }//GEN-LAST:event_btnRegistActionPerformed
 
-    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
+    private void btnRegistMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistMouseClicked
         // TODO add your handling code here:
         if(txtUsn.getText().equals(username) && (txtpass.getText().equals(password))){
             Home hm = new Home();
@@ -125,7 +143,15 @@ public class Login extends javax.swing.JFrame {
             txtUsn.setText("");
             txtpass.setText("");
         }
+    }//GEN-LAST:event_btnRegistMouseClicked
+
+    private void btnLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLoginMouseClicked
+        // TODO add your handling code here:
     }//GEN-LAST:event_btnLoginMouseClicked
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,6 +190,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JButton btnRegist;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblHeader;
